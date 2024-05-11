@@ -12,6 +12,8 @@ import PrivateRoute from "./PrivateRoute";
 import PendingAssignment from "../Pages/PendingAssignment";
 import ViewDetails from "../Pages/ViewDetails";
 import UpdateAssignment from "../Pages/UpdateAssignment";
+import MySubmission from "../Pages/MySubmission";
+import MarkAssignmentPage from "../Pages/MarkAssignmentPage";
 
 
   export  const router = createBrowserRouter([
@@ -43,8 +45,16 @@ import UpdateAssignment from "../Pages/UpdateAssignment";
           loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/assignments/${params.id}`)
         },
         {
+          path: '/my-submission',
+          element: <MySubmission></MySubmission>
+        },
+        {
             path: '/pending-assignment',
             element: <PrivateRoute><PendingAssignment></PendingAssignment></PrivateRoute>
+        },
+        {
+          path: '/marking-page',
+          element: <MarkAssignmentPage></MarkAssignmentPage>
         },
         {
             path: '/login',

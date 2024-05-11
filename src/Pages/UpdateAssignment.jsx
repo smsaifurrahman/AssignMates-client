@@ -8,7 +8,7 @@ const UpdateAssignment = () => {
     const assignment = useLoaderData() || {};
     const [startDate, setStartDate] = useState(new Date());
     const {
-        
+      
         assignment_title,
         marks,
         thumbnail_image,
