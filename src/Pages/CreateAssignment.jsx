@@ -39,19 +39,6 @@ const CreateAssignment = () => {
       } catch (err) {
          console.log(err.message);
       }
-
-
-      // try {
-      //    const { data } = await axios.post(
-      //       `${import.meta.env.VITE_API_URL}/job`,
-      //       jobData
-      //    );
-      //    console.log(data);
-      //    toast.success("New is Added successfully");
-      //    // navigate('/my-posted-job')
-      // } catch (err) {
-      //    console.log(err.message);
-      // }
    };
    return (
       <div className="flex justify-center items-center min-h-[calc(100vh-306px)] my-6">
@@ -96,9 +83,9 @@ const CreateAssignment = () => {
                         id="category"
                         className="border p-2 rounded-md"
                      >
-                        <option value="Web Development">Easy</option>
-                        <option value="Graphics Design">Medium</option>
-                        <option value="Digital Marketing">Hard</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
                      </select>
                   </div>
                   <div>

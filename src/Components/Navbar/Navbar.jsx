@@ -220,6 +220,7 @@ const Navbar = () => {
                      >
                         <div className="w-10 rounded-full" title="">
                            <img
+                              title={user?.displayName}
                               referrerPolicy="no-referrer"
                               alt="User Profile Photo"
                               src={user?.photoURL}

@@ -10,6 +10,8 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import PendingAssignment from "../Pages/PendingAssignment";
+import ViewDetails from "../Pages/ViewDetails";
+import UpdateAssignment from "../Pages/UpdateAssignment";
 
 
   export  const router = createBrowserRouter([
@@ -29,6 +31,16 @@ import PendingAssignment from "../Pages/PendingAssignment";
         {
             path: '/create-assignment',
             element: <PrivateRoute><CreateAssignment></CreateAssignment></PrivateRoute>
+        },
+        {
+          path: '/view-details/:id',
+          element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+          loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/assignments/${params.id}`)
+        },
+        {
+          path: '/update/:id',
+          element: <UpdateAssignment></UpdateAssignment>,
+          loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/assignments/${params.id}`)
         },
         {
             path: '/pending-assignment',
