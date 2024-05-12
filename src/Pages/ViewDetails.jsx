@@ -18,6 +18,7 @@ const ViewDetails = () => {
       difficulty_level,
       _id,
       deadline,
+      doc,
       user_email
    } = assignment;
 
@@ -83,7 +84,7 @@ const ViewDetails = () => {
                      </label>
                      <input
                         required
-                        defaultValue={thumbnail_image}
+                        // defaultValue={doc}
                         id="min_price"
                         name="doc"
                         type="text"

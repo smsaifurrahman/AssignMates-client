@@ -24,46 +24,46 @@ const PendingAssignment = () => {
    };
 
    return (
-      <div>
+      <div className="">
          pending {assignments.length}
          <h2 className="text-center text-2xl font-bold">
             {" "}
             You can mark these assignments{" "}
          </h2>
-         <div className="overflow-x-auto">
-            <table className="table">
-               <thead>
-                  <tr>
-                     <th>No</th>
-                     <th>Title</th>
-                     <th>Marks</th>
-                     <th>Name</th>
-                     <th>Action</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  {assignments.map((assignment, idx) => (
-                     <tr key={assignment._id}>
-                        <th> {idx + 1} </th>
-                        <td>{assignment.assignment_title}</td>
-                        <td> {assignment.marks} </td>
-                        <td>{assignment.examineeName}</td>
-                        <td>
-                           <Link
-                              to={{
-                                 pathname: "/marking-page",
-                                 state: { assignment: assignment },
-                              }}
-                              className="btn btn-secondary"
-                             
-                           >
-                              Give Mark
-                           </Link>
-                        </td>
+         <div className=" ">
+            <div className="overflow-x-auto w-full border-2 ">
+               <table className="table ">
+                
+                 <thead>
+                     <tr>
+                        <th>No</th>
+                        <th>Title</th>
+                        <th>Marks</th>
+                        <th>Name</th>
+                        <th>Action</th>
                      </tr>
-                  ))}
-               </tbody>
-            </table>
+                  </thead>
+                  <tbody>
+                     {assignments.map((assignment, idx) => (
+                        <tr key={assignment._id}>
+                           <th> {idx + 1} </th>
+                           <td>{assignment.assignment_title}</td>
+                           <td> {assignment.marks} </td>
+                           <td>{assignment.examineeName}</td>
+                           <td>
+                              <Link
+                                 to={`/marking-page/${assignment._id}`}
+                                 className="btn btn-secondary"
+                              >
+                                 Give Mark
+                              </Link>
+                           </td>
+                        </tr>
+                     ))}
+                  </tbody>
+              
+               </table>
+            </div>
          </div>
       </div>
    );

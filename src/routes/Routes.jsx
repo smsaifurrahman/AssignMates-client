@@ -53,8 +53,10 @@ import MarkAssignmentPage from "../Pages/MarkAssignmentPage";
             element: <PrivateRoute><PendingAssignment></PendingAssignment></PrivateRoute>
         },
         {
-          path: '/marking-page',
-          element: <MarkAssignmentPage></MarkAssignmentPage>
+          path: '/marking-page/:id',
+          element: <MarkAssignmentPage></MarkAssignmentPage>,
+          loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/pending/mark/${params.id}`)
+
         },
         {
             path: '/login',
