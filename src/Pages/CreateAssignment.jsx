@@ -6,7 +6,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import UseAuth from "../Hooks/UseAuth";
 import axios from "axios";
 import toast from "react-hot-toast";
+import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 const CreateAssignment = () => {
+   const axiosSecure = UseAxiosSecure();
    const [startDate, setStartDate] = useState(new Date());
 
    const { user } = UseAuth() || {};
@@ -29,13 +31,17 @@ const CreateAssignment = () => {
          thumbnail_image,
          difficulty_level,
          marks,
-         user_email
+         user_email,
       };
       console.log(assignmentData);
       try {
-         const {data} = await axios.post(`${import.meta.env.VITE_API_URL}/add-assignment`,assignmentData);
-            toast.success("Assignment successfully");
-            form.reset();
+         const { data } = await axiosSecure.post(
+            `/add-assignment`,
+            assignmentData,
+            { withCredentials: true }
+         );
+         toast.success("Assignment successfully");
+         form.reset();
       } catch (err) {
          console.log(err.message);
       }

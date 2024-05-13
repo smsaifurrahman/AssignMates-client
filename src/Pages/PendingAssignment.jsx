@@ -1,12 +1,13 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import PendingCard from "../Components/PendingCard";
+
 import { Link } from "react-router-dom";
+import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 
 const PendingAssignment = () => {
    const [assignments, setAssignments] = useState([]);
+   const axiosSecure = UseAxiosSecure();
 
    useEffect(() => {
       getData();
@@ -14,9 +15,7 @@ const PendingAssignment = () => {
 
    const getData = async () => {
       try {
-         const { data } = await axios.get(
-            `${import.meta.env.VITE_API_URL}/pending`
-         );
+         const { data } = await axiosSecure(`/pending`);
          setAssignments(data);
       } catch (err) {
          console.log(err.message);
@@ -33,8 +32,7 @@ const PendingAssignment = () => {
          <div className=" ">
             <div className="overflow-x-auto w-full border-2 ">
                <table className="table ">
-                
-                 <thead>
+                  <thead>
                      <tr>
                         <th>No</th>
                         <th>Title</th>
@@ -61,7 +59,6 @@ const PendingAssignment = () => {
                         </tr>
                      ))}
                   </tbody>
-              
                </table>
             </div>
          </div>

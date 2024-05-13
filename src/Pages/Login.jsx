@@ -1,13 +1,16 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import UseAuth from "../Hooks/UseAuth";
 import toast from "react-hot-toast";
+import axios from "axios";
+import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 
 const Login = () => {
-
+    
     const navigate = useNavigate();
     const { signIn, signInWithGoogle, user, loading } = UseAuth();
     const location = useLocation();
     const from = location.state || "/";
+    const axiosSecure = UseAxiosSecure()
 
   // Email Password Signin
   const handleSignIn = async (e) => {
@@ -19,8 +22,8 @@ const Login = () => {
     try {
        //User Login
        const result = await signIn(email, pass);
-       console.log(result);
-
+       const {data} = await axiosSecure.post(`/jwt`, {email: result?.user?.email} );
+     
        navigate(from, { replace: true });
        toast.success("Sign in Successful");
     } catch (err) {
@@ -35,6 +38,10 @@ const Login = () => {
        // 1. Google sign in with firebase
        const result = await signInWithGoogle();
        // console.log(result.user)
+       const {data} = await axiosSecure.post(`/jwt`, {email: result?.user?.email} );
+      //  console.log(data);
+      //  const {data} = await axios.post(`${import.meta.env.VITE_API_URL}/jwt`, {email: result?.user?.email}, {withCredentials:true} );
+      //  console.log(data);
 
        toast.success("Sign in Successful");
        navigate(from, { replace: true });

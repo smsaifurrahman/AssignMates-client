@@ -1,11 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import { useEffect, useState } from "react";
-import axios from "axios";
+
 import toast from "react-hot-toast";
+import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 
 const UpdateAssignment = () => {
     const assignment = useLoaderData() || {};
+    const axiosSecure = UseAxiosSecure()
     const [startDate, setStartDate] = useState(new Date());
     const {
       
@@ -41,7 +43,7 @@ const UpdateAssignment = () => {
         };
         console.log(assignmentData);
         try {
-           const {data} = await axios.patch(`${import.meta.env.VITE_API_URL}/update/${_id}`,assignmentData);
+           const {data} = await axiosSecure.patch(`/update/${_id}`,assignmentData);
               toast.success("updated successfully");
           
         } catch (err) {

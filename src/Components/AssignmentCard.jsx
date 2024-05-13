@@ -6,9 +6,11 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import UseAuth from "../Hooks/UseAuth";
 import toast from "react-hot-toast";
+import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 
 const AssignmentCard = ({ assignment }) => {
-   const {user} = UseAuth()
+   const axiosSecure = UseAxiosSecure();
+   const { user } = UseAuth();
    const {
       assignment_title,
       marks,
@@ -16,16 +18,17 @@ const AssignmentCard = ({ assignment }) => {
       difficulty_level,
       _id,
       deadline,
-      user_email
+      user_email,
    } = assignment;
 
    const handleDelete = async () => {
-      if(user.email !== user_email) return Swal.fire({
-         title: "Unauthorized",
-         text: "You are not authorized to delete",
-         icon: "error"
-       });
-         
+      if (user.email !== user_email)
+         return Swal.fire({
+            title: "Unauthorized",
+            text: "You are not authorized to delete",
+            icon: "error",
+         });
+
       Swal.fire({
          title: "Are you sure?",
          text: "You won't be able to revert this!",
@@ -37,18 +40,15 @@ const AssignmentCard = ({ assignment }) => {
       }).then((result) => {
          if (result.isConfirmed) {
             try {
-               const { data } = axios.delete(
-                  `${import.meta.env.VITE_API_URL}/delete/${_id}` );
-                  Swal.fire({
-                     title: "Deleted!",
-                     text: "Assignment deleted.",
-                     icon: "success"
-                   });
+               const { data } = axiosSecure.delete(`/delete/${_id}`);
+               Swal.fire({
+                  title: "Deleted!",
+                  text: "Assignment deleted.",
+                  icon: "success",
+               });
             } catch (err) {
                console.log(err.message);
             }
-
-              
          }
       });
    };
