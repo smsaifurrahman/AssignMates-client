@@ -46,7 +46,7 @@ import MarkAssignmentPage from "../Pages/MarkAssignmentPage";
         },
         {
           path: '/my-submission',
-          element: <MySubmission></MySubmission>
+          element: <PrivateRoute><MySubmission></MySubmission></PrivateRoute>
         },
         {
             path: '/pending-assignment',

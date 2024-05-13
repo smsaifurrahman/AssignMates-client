@@ -99,8 +99,8 @@ const Navbar = () => {
                </ul>
             </div>
             <Link to={"/"}>
-               {" "}
-               <h2 className="btn btn-ghost text-2xl">AssignMates</h2>{" "}
+              
+               <h2 className="btn btn-ghost text-2xl">AssignMates</h2>
             </Link>
          </div>
          <div className="navbar-center hidden lg:flex">

@@ -54,22 +54,26 @@ const AssignmentCard = ({ assignment }) => {
    };
 
    return (
-      <div className="card  bg-base-100 shadow-xl hover:">
-         <figure>
+      <div className="card  bg-base-100 shadow-xl  hover:scale-105 transition-transform duration-300">
+         <figure className="relative">
             <img className="h-60 w-full" src={thumbnail_image} alt="Shoes" />
+            <p className="absolute bg-orange-500 text-white font-bold px-4 py-2
+              rounded-r left-0 bottom-0"> {difficulty_level} </p>
          </figure>
          <div className="card-body">
-            <h2 className="card-title">{assignment_title}</h2>
-            <p> {difficulty_level} </p>
-            <p> </p>
+           <div className="flex items-center gap-8 mb-4 justify-between">
+           <h2 className="card-title font-bold text-sky-500 italic">{assignment_title}</h2>
+           
+           <p className="text-xl "> Total Marks: {marks} </p>
+           </div>
             <div className=" ">
                <Link to={`/view-details/${_id}`}>
-                  <button className="btn btn-primary">View Details</button>
+                  <button className="btn bg-green-400 text-white">View Details</button>
                </Link>
                <Link to={`/update/${_id}`}>
-                  <button className="btn   mx-1 btn-primary">Update</button>
+                  <button className="btn   mx-1 btn-secondary">Update</button>
                </Link>
-               <button onClick={handleDelete} className="btn btn-primary">
+               <button onClick={handleDelete} className="btn btn-error text-white">
                   Delete
                </button>
             </div>
