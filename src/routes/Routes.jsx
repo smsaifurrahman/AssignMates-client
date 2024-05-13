@@ -41,7 +41,7 @@ import MarkAssignmentPage from "../Pages/MarkAssignmentPage";
         },
         {
           path: '/update/:id',
-          element: <UpdateAssignment></UpdateAssignment>,
+          element: <PrivateRoute><UpdateAssignment></UpdateAssignment></PrivateRoute>,
           loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/assignments/${params.id}`)
         },
         {

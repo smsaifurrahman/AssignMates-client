@@ -22,6 +22,11 @@ const AssignmentCard = ({ assignment }) => {
    } = assignment;
 
    const handleDelete = async () => {
+      if(!user) return Swal.fire({
+         title: "Unauthorized",
+         text: "You need to login first",
+         icon: "error",
+      });
       if (user.email !== user_email)
          return Swal.fire({
             title: "Unauthorized",
