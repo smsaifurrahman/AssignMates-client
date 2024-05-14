@@ -78,7 +78,7 @@ const MySubmission = () => {
                      </div>
                      <div>
                         <button
-                           className="btn btn-secondary"
+                           className="btn btn-accent text-white font-bold"
                            onClick={() => {
                               document.getElementById("my_modal_4").showModal();
                               setPreview(assignment.doc);
