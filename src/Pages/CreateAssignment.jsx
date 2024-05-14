@@ -43,7 +43,7 @@ const CreateAssignment = () => {
          toast.success("Assignment created successfully");
          form.reset();
       } catch (err) {
-         console.log(err.message);
+         // console.log(err.message);
       }
    };
    return (
