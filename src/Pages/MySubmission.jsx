@@ -59,7 +59,7 @@ const MySubmission = () => {
                         <p className="text-xl font-bold">
                            <span>Total Marks: </span> {assignment.marks}
                         </p>
-                        <p >
+                        <p className="text-xl font-bold" >
                            <span className="text-xl font-bold"> Your Marks: </span>
                            {assignment.obtained_mark
                               ? assignment.obtained_mark

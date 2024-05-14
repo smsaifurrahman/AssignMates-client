@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import { useEffect, useState } from "react";
 
@@ -7,7 +7,8 @@ import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 
 const UpdateAssignment = () => {
     const assignment = useLoaderData() || {};
-    const axiosSecure = UseAxiosSecure()
+    const axiosSecure = UseAxiosSecure();
+    const navigate = useNavigate()
     const [startDate, setStartDate] = useState(new Date());
     const {
       
@@ -45,6 +46,7 @@ const UpdateAssignment = () => {
         try {
            const {data} = await axiosSecure.patch(`/update/${_id}`,assignmentData);
               toast.success("updated successfully");
+              navigate('/assignments')
           
         } catch (err) {
            console.log(err.message);

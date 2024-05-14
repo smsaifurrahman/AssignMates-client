@@ -243,13 +243,13 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52"
                      >
                         <li>
-                           <Link to={'/my-submission'}><div className="justify-between">My Submission</div></Link>
+                           <Link to={'/my-submission'}><div className="justify-between text-sky-500 font-bold">My Submission</div></Link>
                         </li>
 
                         <li className="mt-2">
                            <button
                               onClick={handleLogout}
-                              className=" block text-center"
+                              className=" block text-sky-500 font-bold text-center"
                            >
                               Logout
                            </button>
