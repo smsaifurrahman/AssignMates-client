@@ -1,5 +1,6 @@
 /** @format */
 
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -8,7 +9,7 @@ import UseAuth from "../Hooks/UseAuth";
 import toast from "react-hot-toast";
 import UseAxiosSecure from "../Hooks/UseAxiosSecure";
 
-const AssignmentCard = ({ assignment }) => {
+const AssignmentCard = ({ assignment, onDelete }) => {
    const axiosSecure = UseAxiosSecure();
    const { user } = UseAuth();
    const {
@@ -51,6 +52,7 @@ const AssignmentCard = ({ assignment }) => {
                   text: "Assignment deleted.",
                   icon: "success",
                });
+               onDelete(_id)
             } catch (err) {
                console.log(err.message);
             }

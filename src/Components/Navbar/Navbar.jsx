@@ -15,6 +15,16 @@ const Navbar = () => {
    const navLinks = (
       <>
          <NavLink
+            to={"/"}
+            className={({ isActive }) =>
+               isActive
+                  ? " font-bold text-xl text-gray-500 p-2 text-rounded-xl "
+                  : "font-bold p-2 text-xl text-sky-500 rounded-xl "
+            }
+         >
+            Home
+         </NavLink>
+         <NavLink
             to={"/assignments"}
             className={({ isActive }) =>
                isActive

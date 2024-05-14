@@ -31,7 +31,9 @@ import ErrorPage from "../Pages/ErrorPage";
         },
         {
             path: '/assignments',
-            element: <Assignments></Assignments>
+            element: <Assignments></Assignments>,
+            loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/assignments`)
+
         },
         {
             path: '/create-assignment',

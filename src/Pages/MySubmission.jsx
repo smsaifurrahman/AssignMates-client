@@ -24,7 +24,7 @@ const MySubmission = () => {
 
    return (
       <div>
-         my submission {assignments.length}
+    
          <h2 className="text-center text-2xl my-6 font-bold">
             My Submission List
          </h2>

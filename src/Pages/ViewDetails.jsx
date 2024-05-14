@@ -30,7 +30,7 @@ const ViewDetails = () => {
       const form = e.target;
       const doc = form.doc.value;
       const note = form.note.value;
-      const status= 'pending';
+      const status= 'Pending';
       const examineeMail = user?.email;
       const examineeName = user?.displayName;
 
@@ -63,7 +63,7 @@ const ViewDetails = () => {
    };
 
    return (
-      <div className=" card bg-base-100 shadow-xl flex ">
+      <div className=" card bg-base-100 shadow-xl my-8 flex ">
          <figure className="">
             <img className="h-[400px] w-full" src={thumbnail_image} alt="Movie" />
          </figure>
@@ -72,7 +72,7 @@ const ViewDetails = () => {
             <p className=" text-xl"> <span className="text-xl font-serif font-bold ">Description: <br /></span> {description} </p>
             <h2> <span className="text-xl font-bold font-serif " >Total Marks:</span> {marks} </h2>
             <h2> <span className="text-xl font-bold font-serif " >Difficulty Level:</span> {difficulty_level} </h2>
-            <h2> <span className="text-xl font-bold font-serif " >Deadline</span> {deadline} </h2>
+            <h2> <span className="text-xl font-bold font-serif " >Deadline:</span> {new Date(deadline).toLocaleDateString()} </h2>
             <div className="card-actions justify-end">
                {/* <button  href="#my_modal_8" className="btn btn-primary">Take Task</button> */}
                <a href="#my_modal_8" className="btn btn-secondary">
@@ -86,7 +86,7 @@ const ViewDetails = () => {
                <h3 className="font-bold text-lg my-4 text-secondary text-center">Summit your assignment Here</h3>
                <form onSubmit={handleSubmitAssignment}>
                   <div>
-                     <label className="text-gray-700 " htmlFor="min_price">
+                     <label className="" htmlFor="min_price">
                         Submission doc
                      </label>
                      <input
@@ -99,7 +99,7 @@ const ViewDetails = () => {
                      />
                   </div>
                   <div className="flex flex-col gap-2 mt-4">
-                     <label className="text-gray-700 " htmlFor="description">
+                     <label className=" " htmlFor="description">
                         Note
                      </label>
                      <textarea

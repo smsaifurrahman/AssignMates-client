@@ -54,7 +54,7 @@ const Login = () => {
 
 
     return (
-      <div className='flex justify-center items-center min-h-[calc(100vh-306px)]'>
+      <div className='flex justify-center items-center my-10 min-h-[calc(100vh-306px)]'>
         <div className='flex w-full max-w-sm mx-auto overflow-hidden border-2 rounded-lg   lg:max-w-4xl '>
           <div
             className='hidden bg-cover  bg-center lg:block lg:w-1/2'
