@@ -16,12 +16,11 @@ const Assignments = () => {
 
    const getData = async (event) => {
     const level = event?.target?.value;
-    console.log(level);
+   //  console.log(level);
       try {
          const { data } = await axios.get(
             `${import.meta.env.VITE_API_URL}/assignments${level ? `?sortBy=${level}` : ''}`
          );
-         console.log(data);
          setAssignments(data);
       } catch (err) {
          console.log(err.message);

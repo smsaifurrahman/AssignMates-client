@@ -18,8 +18,8 @@ const Navbar = () => {
             to={"/assignments"}
             className={({ isActive }) =>
                isActive
-                  ? " font-bold text-xl text-[#8b6571] p-2 underline text-rounded-xl "
-                  : "font-bold p-2 text-xl text-[#8b6571] rounded-xl "
+                  ? " font-bold text-xl text-gray-500 p-2 text-rounded-xl "
+                  : "font-bold p-2 text-xl text-sky-500 rounded-xl "
             }
          >
             Assignments
@@ -30,8 +30,8 @@ const Navbar = () => {
             to={"/create-assignment"}
             className={({ isActive }) =>
                isActive
-                  ? " font-bold text-xl text-[#8b6571]  underline text-rounded-xl p-2 "
-                  : "font-bold p-2 text-xl text-[#8b6571] rounded-xl "
+                  ? " font-bold text-xl text-gray-500 text-gray-500text-rounded-xl p-2 "
+                  : "font-bold p-2 text-xl text-sky-500 rounded-xl "
             }
          >
             Create Assignments
@@ -40,8 +40,8 @@ const Navbar = () => {
             to={"/pending-assignment"}
             className={({ isActive }) =>
                isActive
-                  ? " font-bold text-xl text-[#8b6571] p-2  underline text-rounded-xl "
-                  : "font-bold p-2 text-xl text-[#8b6571] rounded-xl "
+                  ? " font-bold text-xl text-gray-500  p-2  text-gray-500text-rounded-xl "
+                  : "font-bold p-2 text-xl text-sky-500 rounded-xl "
             }
          >
             Pending Assignment
@@ -61,7 +61,7 @@ const Navbar = () => {
 
    const handleToggle = (e) => {
       if (e.target.checked) {
-         setTheme("synthwave");
+         setTheme("night");
       } else {
          setTheme("light");
       }
@@ -113,8 +113,8 @@ const Navbar = () => {
                      to={"/login"}
                      className={({ isActive }) =>
                         isActive
-                           ? " font-bold text-xl text-[#8b6571] p-2  underline text-rounded-xl "
-                           : "font-bold p-2 text-xl text-[#8b6571] rounded-xl "
+                           ? " font-bold text-xl text-gray-500  p-2  text-gray-500text-rounded-xl "
+                           : "font-bold p-2 text-xl text-sky-500 rounded-xl "
                      }
                   >
                      Login
@@ -123,8 +123,8 @@ const Navbar = () => {
                      to={"/register"}
                      className={({ isActive }) =>
                         isActive
-                           ? " font-bold text-xl text-[#8b6571] p-2  underline text-rounded-xl "
-                           : "font-bold p-2 text-xl text-[#8b6571] rounded-xl "
+                           ? " font-bold text-xl text-gray-500  p-2  text-gray-500text-rounded-xl "
+                           : "font-bold p-2 text-xl text-sky-500 rounded-xl "
                      }
                   >
                      Register

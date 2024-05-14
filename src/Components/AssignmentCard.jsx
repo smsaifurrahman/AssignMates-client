@@ -59,7 +59,7 @@ const AssignmentCard = ({ assignment }) => {
    };
 
    return (
-      <div className="card  bg-base-100 shadow-xl  hover:scale-105 transition-transform duration-300">
+      <div className="card  bg-base-100 shadow-xl   md:hover:scale-105 transition-transform duration-300">
          <figure className="relative">
             <img className="h-60 w-full" src={thumbnail_image} alt="Shoes" />
             <p className="absolute bg-orange-500 text-white font-bold px-4 py-2
