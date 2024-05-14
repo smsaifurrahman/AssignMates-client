@@ -49,7 +49,7 @@ const AssignmentCard = ({ assignment, onDelete }) => {
                const { data } = axiosSecure.delete(`/delete/${_id}`);
                Swal.fire({
                   title: "Deleted!",
-                  text: "Assignment deleted.",
+                  text: "Assignment deleted Successfully",
                   icon: "success",
                });
                onDelete(_id)
