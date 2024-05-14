@@ -24,17 +24,17 @@ const PendingAssignment = () => {
 
    return (
       <div className="">
-         pending {assignments.length}
-         <h2 className="text-center text-2xl font-bold">
-            {" "}
+      
+         <h2 className="text-center text-3xl my-6 font-serif font-bold">
+           
             You can mark these assignments{" "}
          </h2>
          <div className=" ">
-            <div className="overflow-x-auto w-full border-2 ">
+            <div className="overflow-x-auto w-full  ">
                <table className="table ">
-                  <thead>
-                     <tr>
-                        <th>No</th>
+                  <thead >
+                     <tr className="text-xl font-bold">
+                        <th className="font-bold">No</th>
                         <th>Title</th>
                         <th>Marks</th>
                         <th>Name</th>
@@ -43,7 +43,9 @@ const PendingAssignment = () => {
                   </thead>
                   <tbody>
                      {assignments.map((assignment, idx) => (
-                        <tr key={assignment._id}>
+                        <tr 
+                        className="text-xl"
+                        key={assignment._id}>
                            <th> {idx + 1} </th>
                            <td>{assignment.assignment_title}</td>
                            <td> {assignment.marks} </td>

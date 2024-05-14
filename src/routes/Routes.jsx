@@ -14,12 +14,14 @@ import ViewDetails from "../Pages/ViewDetails";
 import UpdateAssignment from "../Pages/UpdateAssignment";
 import MySubmission from "../Pages/MySubmission";
 import MarkAssignmentPage from "../Pages/MarkAssignmentPage";
+import ErrorPage from "../Pages/ErrorPage";
 
 
   export  const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',

@@ -118,7 +118,7 @@ const MarkAssignmentPage = () => {
                </div>
                <div className="">
                   
-                  <button className="btn w-full btn-primary">Add Mark</button>
+                  <button className="btn w-full bg-sky-500 mt-3 text-white ">Add Mark</button>
                </div>
             </form>
          </div>

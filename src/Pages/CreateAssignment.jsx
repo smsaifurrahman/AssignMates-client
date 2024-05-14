@@ -48,39 +48,41 @@ const CreateAssignment = () => {
    };
    return (
       <div className="flex justify-center items-center min-h-[calc(100vh-306px)] my-6">
-         <section className=" mx-auto w-full md:w-2/3 p-2 md:p-6 bg-white rounded-md shadow-md ">
+         <section className=" mx-auto w-full md:w-2/3 p-2 md:p-6 rounded-md shadow-md ">
             <h2 className="text-2xl mb-8 text-center   font-semibold text-blue-700 capitalize ">
                Create a Assignment
             </h2>
 
-            <form onSubmit={handleAssignmentForm}>
+            <form 
+            className="border-2 p-6 rounded-xl bg-base-200"
+            onSubmit={handleAssignmentForm}>
                <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
                   <div>
-                     <label className="text-gray-700 " htmlFor="job_title">
+                     <label className="'' " htmlFor="job_title">
                         Assignment Title
                      </label>
                      <input
                         required
                         name="assignment_title"
                         type="text"
-                        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                        className="block w-full px-4 py-2 mt-2 '' bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                      />
                   </div>
 
                   <div>
-                     <label className="text-gray-700 " htmlFor="emailAddress">
+                     <label className="'' " htmlFor="emailAddress">
                         Marks
                      </label>
                      <input
                         required
                         type="number"
                         name="marks"
-                        className="w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                        className="w-full px-4 py-2 mt-2 '' bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                      />
                   </div>
 
                   <div className="flex flex-col gap-2 ">
-                     <label className="text-gray-700 " htmlFor="category">
+                     <label className="'' " htmlFor="category">
                         Difficulty Level
                      </label>
                      <select
@@ -95,7 +97,7 @@ const CreateAssignment = () => {
                      </select>
                   </div>
                   <div>
-                     <label className="text-gray-700 " htmlFor="min_price">
+                     <label className="'' " htmlFor="min_price">
                         Thumbnail Image URL
                      </label>
                      <input
@@ -103,12 +105,12 @@ const CreateAssignment = () => {
                         id="min_price"
                         name="image"
                         type="text"
-                        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                        className="block w-full px-4 py-2 mt-2 '' bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                      />
                   </div>
 
                   <div>
-                     <label className="text-gray-700 " htmlFor="max_price">
+                     <label className="'' " htmlFor="max_price">
                         Email
                      </label>
                      <input
@@ -118,11 +120,11 @@ const CreateAssignment = () => {
                         id="max_price"
                         name="email"
                         type="email"
-                        className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                        className="block w-full px-4 py-2 mt-2 '' bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                      />
                   </div>
                   <div className="flex flex-col gap-2 ">
-                     <label className="text-gray-700">Deadline</label>
+                     <label className="''">Deadline</label>
 
                      {/* Date Picker Input Field */}
                      <DatePicker
@@ -133,11 +135,11 @@ const CreateAssignment = () => {
                   </div>
                </div>
                <div className="flex flex-col gap-2 mt-4">
-                  <label className="text-gray-700 " htmlFor="description">
+                  <label className="'' " htmlFor="description">
                      Description
                   </label>
                   <textarea
-                     className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                     className="block w-full px-4 py-2 mt-2 '' bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                      required
                      name="description"
                      id="description"
