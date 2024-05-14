@@ -37,7 +37,7 @@ const AssignmentCard = ({ assignment, onDelete }) => {
 
       Swal.fire({
          title: "Are you sure?",
-         text: "You won't be able to revert this!",
+         text: "You won't be able to revert this data!",
          icon: "warning",
          showCancelButton: true,
          confirmButtonColor: "#3085d6",
