@@ -31,7 +31,7 @@ const AssignmentCard = ({ assignment, onDelete }) => {
       if (user.email !== user_email)
          return Swal.fire({
             title: "Unauthorized",
-            text: "You are not authorized to delete",
+            text: "You are not authorized to delete it",
             icon: "error",
          });
 
