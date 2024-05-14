@@ -1,9 +1,10 @@
 /** @format */
 
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 import UseAuth from "../Hooks/UseAuth";
+
 
 
 
@@ -11,6 +12,7 @@ const ViewDetails = () => {
    const {user} = UseAuth() || {};
    const navigate = useNavigate()
    const assignment = useLoaderData() || {};
+
    const {
       assignment_title,
       marks,
@@ -34,7 +36,7 @@ const ViewDetails = () => {
 
       if(examineeMail === user_email) return Swal.fire({
          title: "Forbidden",
-         text: "You can not take the test",
+         text: " You created the assignment You can not take the test",
          icon: "error"
        });
 
@@ -51,6 +53,7 @@ const ViewDetails = () => {
             text: "Your assignment submitted",
             icon: "success"
           });
+          navigate('/assignments')
       } catch(err) {
          console.log(err.message);
       }

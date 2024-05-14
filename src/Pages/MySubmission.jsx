@@ -45,9 +45,9 @@ const MySubmission = () => {
                               Status:
                               <span
                                  className={
-                                    assignment.status === "pending"
-                                       ? "text-orange-500"
-                                       : "text-green-500"
+                                    assignment.status === "Pending"
+                                       ? "text-orange-500 ml-2"
+                                       : "text-green-500 ml-2"
                                  }
                               >
                                  {assignment.status}

@@ -55,8 +55,8 @@ const Register = () => {
                   <img className="w-auto h-7 sm:h-8" src="" alt="" />
                </div>
 
-               <p className="mt-3 text-xl text-center '' ">
-                  Get Your Free Account Now.
+               <p className="mt-3 text-2xl font-bold text-center '' ">
+                  Register Free Account Now.
                </p>
 
                {/* <div className='flex cursor-pointer items-center justify-center mt-4 '' transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 '>

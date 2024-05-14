@@ -98,10 +98,11 @@ const Navbar = () => {
                   {navLinks}
                </ul>
             </div>
-            <Link to={"/"}>
-              
-               <h2 className="btn btn-ghost text-2xl">AssignMates</h2>
+            <Link to={"/"}  className=" italic font-bold  cursor-pointer text-3xl">Assign<span className="text-sky-500 text-3xl md:text-5xl">M</span>ates
+
             </Link>
+           
+
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navLinks}</ul>
@@ -229,7 +230,7 @@ const Navbar = () => {
                      </div>
                      <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52"
                      >
                         <li>
                            <Link to={'/my-submission'}><div className="justify-between">My Submission</div></Link>
@@ -238,7 +239,7 @@ const Navbar = () => {
                         <li className="mt-2">
                            <button
                               onClick={handleLogout}
-                              className="bg-gray-200 block text-center"
+                              className=" block text-center"
                            >
                               Logout
                            </button>
