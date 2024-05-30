@@ -15,6 +15,7 @@ import UpdateAssignment from "../Pages/UpdateAssignment";
 import MySubmission from "../Pages/MySubmission";
 import MarkAssignmentPage from "../Pages/MarkAssignmentPage";
 import ErrorPage from "../Pages/ErrorPage";
+import TopAssignments from "../Pages/TopAssignments";
 
 
   export  const router = createBrowserRouter([
@@ -56,6 +57,10 @@ import ErrorPage from "../Pages/ErrorPage";
         {
             path: '/pending-assignment',
             element: <PrivateRoute><PendingAssignment></PendingAssignment></PrivateRoute>
+        },
+        {
+          path: '/top-assignments',
+          element: <TopAssignments></TopAssignments>
         },
         {
           path: '/marking-page/:id',

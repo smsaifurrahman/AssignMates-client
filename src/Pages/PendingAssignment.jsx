@@ -37,7 +37,7 @@ const PendingAssignment = () => {
                         <th className="font-bold">No</th>
                         <th>Title</th>
                         <th>Marks</th>
-                        <th>Name</th>
+                        <th>Submitted by</th>
                         <th>Action</th>
                      </tr>
                   </thead>
