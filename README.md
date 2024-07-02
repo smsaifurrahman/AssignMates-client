@@ -16,9 +16,9 @@ This project aims to create a collaborative study platform where users can engag
 6.Creators have exclusive deletion rights; all logged in users can update assignments.
 7. Any logged in user see top assignements, which displays which assignments are attempted most by users(New feature)
 
-**Technologies used: ** MongoDB, Express.js, React with Vite, and Node.js, firebase
+****Technologies used: ** MongoDB, Express.js, React with Vite, and Node.js, firebase
 
-To install AssignMates, follow these steps:
+**To install AssignMates, follow these steps:**
 
 Clone the repository: git colne https://github.com/smsaifurrahman/AssignMates-client.git
 Navigate to the project directory: cd project-title
